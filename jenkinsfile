@@ -3,21 +3,20 @@ pipeline
     agent any
         stages
         {
-            stage("Install dependencies")
+            stage("dependencies")
             {
                 steps
                 {
                     sh 'npm install'
                 }
-            
         }
- stage{
+        stage{
             steps{
                 script{
                 def output=sh('script:server.js-SNAPSHOT-1.0').trim()
                 println "code ${output} is running"
                 }
-            }
+            }server.js
         }
       stage("Test")
       {

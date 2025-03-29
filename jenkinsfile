@@ -14,7 +14,7 @@ pipeline
  stage{
             steps{
                 script{
-                def output=sh('script:npm-jar target/server.js-SNAPSHOT-1.0' returnStdout:true).trim()
+                def output=sh('script:server.js-SNAPSHOT-1.0').trim()
                 println "code ${output} is running"
                 }
             }
